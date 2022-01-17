@@ -1,0 +1,18 @@
+{
+  "name": "Super Standup",
+  "isPublic": false,
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#D6D1F2",
+  "icon": "bus",
+  "slug": "super-standup",
+  "evaluationVersion": 2,
+  "publishedModeThemeId": "61e14b833d0a7d7212c5cfa8",
+  "editModeThemeId": "61e14b833d0a7d7212c5cfa8",
+  "createdAt": {
+    "seconds": 1642412950,
+    "nanos": 773000000
+  },
+  "deleted": false
+}

@@ -1,0 +1,445 @@
+{
+  "unpublishedPage": {
+    "name": "Page1",
+    "slug": "page1",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 736,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 5010,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 49,
+          "minHeight": 1292,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "Standup_Table",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "avatar",
+                "name",
+                "notes"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "columns": 64,
+              "topRow": 8,
+              "bottomRow": 68,
+              "isSortable": true,
+              "parentRowSpace": 40,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "columnTypeMap": {
+                "avatar": {
+                  "type": "image",
+                  "format": ""
+                }
+              },
+              "animateLoading": true,
+              "parentColumnSpace": 1,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.avatar.computedValue"
+                },
+                {
+                  "key": "primaryColumns.name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.notes.computedValue"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "avatar": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "avatar",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "image",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "avatar",
+                  "computedValue": "{{Standup_Table.sanitizedTableData.map((currentRow) => ( currentRow.avatar))}}",
+                  "outputFormat": ""
+                },
+                "name": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "name",
+                  "computedValue": "{{Standup_Table.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
+                },
+                "notes": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "notes",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "notes",
+                  "computedValue": "{{Standup_Table.sanitizedTableData.map((currentRow) => ( currentRow.notes))}}"
+                }
+              },
+              "delimiter": ",",
+              "migrated": true,
+              "key": "ezp2wdyqrj",
+              "derivedColumns": {},
+              "rightColumn": 64,
+              "textSize": "PARAGRAPH",
+              "widgetId": "8cs8wnhz4t",
+              "isVisibleFilters": true,
+              "tableData": "{{fetch_standup_updates.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "rows": 60,
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "avatar": 80,
+                "name": 120
+              }
+            },
+            {
+              "widgetName": "Standup_Input",
+              "displayName": "Input",
+              "iconSVG": "/static/media/icon.9f505595.svg",
+              "onSubmit": "{{add_standup_updates.run(() => fetch_standup_updates.run(), () => {})}}",
+              "topRow": 4,
+              "bottomRow": 8,
+              "autoFocus": false,
+              "type": "INPUT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onSubmit"
+                }
+              ],
+              "resetOnSubmit": true,
+              "leftColumn": 20,
+              "dynamicBindingPathList": [],
+              "labelStyle": "",
+              "inputType": "TEXT",
+              "placeholderText": "Type your update and hit enter!",
+              "isDisabled": false,
+              "key": "vmmd3vem9u",
+              "isRequired": false,
+              "rightColumn": 44,
+              "widgetId": "60bvue4saf",
+              "isVisible": true,
+              "label": "",
+              "allowCurrencyChange": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "iconAlign": "left",
+              "defaultText": ""
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "61e53baf33f03a13de18c3e9",
+              "name": "fetch_standup_updates",
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 30000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "Standup_Table",
+          "MainContainer",
+          "Standup_Input"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Page1",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "publishedPage": {
+    "name": "Page1",
+    "slug": "page1",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 736,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 5010,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 49,
+          "minHeight": 1292,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "Standup_Table",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "avatar",
+                "name",
+                "notes"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "columns": 64,
+              "topRow": 8,
+              "bottomRow": 68,
+              "isSortable": true,
+              "parentRowSpace": 40,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "columnTypeMap": {
+                "avatar": {
+                  "type": "image",
+                  "format": ""
+                }
+              },
+              "animateLoading": true,
+              "parentColumnSpace": 1,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.avatar.computedValue"
+                },
+                {
+                  "key": "primaryColumns.name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.notes.computedValue"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "avatar": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "avatar",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "image",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "avatar",
+                  "computedValue": "{{Standup_Table.sanitizedTableData.map((currentRow) => ( currentRow.avatar))}}",
+                  "outputFormat": ""
+                },
+                "name": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "name",
+                  "computedValue": "{{Standup_Table.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
+                },
+                "notes": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "notes",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "notes",
+                  "computedValue": "{{Standup_Table.sanitizedTableData.map((currentRow) => ( currentRow.notes))}}"
+                }
+              },
+              "delimiter": ",",
+              "migrated": true,
+              "key": "ezp2wdyqrj",
+              "derivedColumns": {},
+              "rightColumn": 64,
+              "textSize": "PARAGRAPH",
+              "widgetId": "8cs8wnhz4t",
+              "isVisibleFilters": true,
+              "tableData": "{{fetch_standup_updates.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "rows": 60,
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "avatar": 80,
+                "name": 120
+              }
+            },
+            {
+              "widgetName": "Standup_Input",
+              "displayName": "Input",
+              "iconSVG": "/static/media/icon.9f505595.svg",
+              "onSubmit": "{{add_standup_updates.run(() => fetch_standup_updates.run(), () => {})}}",
+              "topRow": 4,
+              "bottomRow": 8,
+              "autoFocus": false,
+              "type": "INPUT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onSubmit"
+                }
+              ],
+              "resetOnSubmit": true,
+              "leftColumn": 20,
+              "dynamicBindingPathList": [],
+              "labelStyle": "",
+              "inputType": "TEXT",
+              "placeholderText": "Type your update and hit enter!",
+              "isDisabled": false,
+              "key": "vmmd3vem9u",
+              "isRequired": false,
+              "rightColumn": 44,
+              "widgetId": "60bvue4saf",
+              "isVisible": true,
+              "label": "",
+              "allowCurrencyChange": false,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "iconAlign": "left",
+              "defaultText": ""
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "61e53baf33f03a13de18c3e9",
+              "name": "fetch_standup_updates",
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 30000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "Standup_Table",
+          "MainContainer",
+          "Standup_Input"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Page1",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "deleted": false,
+  "policies": [],
+  "userPermissions": [
+    "read:pages",
+    "manage:pages"
+  ],
+  "gitSyncId": "61e53b9633f03a13de18c3e2_61e53b9633f03a13de18c3e4"
+}
